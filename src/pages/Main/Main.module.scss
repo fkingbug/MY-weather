@@ -1,0 +1,15 @@
+.main {
+  display: flex;
+  height: 100%;
+  width: 100%;
+
+  .leftSide {
+    width: 20%;
+    padding: 15px;
+    background-color: whitesmoke;
+  }
+  .rigthSide {
+    flex: 1;
+    border-left: 1px solid black;
+  }
+}
