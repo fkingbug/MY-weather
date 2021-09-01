@@ -1,21 +1,30 @@
+:root {
+  --color--text: 255, 255, 255;
+}
+//195, 189, 189
 .searchBox {
-  border-radius: 55px;
-  background: #f0f3ff;
   display: flex;
   align-items: center;
-  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+  width: auto;
+  border-radius: 55px;
+  color: rgb(34, 34, 34);
+  background-color: rgba(var(--color--text), 0.5);
 
   input {
+    font-size: 15px;
+    padding: 10px 0 10px 15px;
+    width: 150px;
     border: 0;
     background: transparent;
     outline: none;
     transition: 2s;
   }
   .btn {
-    color: rgb(112, 109, 109);
+    color: #000;
     cursor: pointer;
     opacity: 0.8;
     transition: 0.2s ease-in-out;
+    padding-right: 10px;
   }
   .btn:hover {
     opacity: 1;
@@ -37,4 +46,20 @@
     padding-left: 10px;
     width: 185px;
   }
+}
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: rgb(34, 34, 34);
+}
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: rgb(34, 34, 34);
+}
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: rgb(34, 34, 34);
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: rgb(34, 34, 34);
 }

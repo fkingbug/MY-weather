@@ -4,10 +4,7 @@ import cl from './SearchBox.module.scss'
 
 const SearchBox = ({ searchValue, setSearchValue, axiosGetWeather, castomStyle }) => {
   return (
-    <div
-      className={`${cl.searchBox}  ${
-        castomStyle === 'searchPage' ? cl.searchPage : cl.rigthSearch
-      }`}>
+    <div className={cl.searchBox}>
       <MyInput
         value={searchValue}
         onChange={e => setSearchValue(e.target.value)}
