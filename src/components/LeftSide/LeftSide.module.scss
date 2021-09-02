@@ -1,0 +1,27 @@
+.leftSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  border-right: 1px solid black;
+
+  h1 {
+    color: rgba(var(--color--text), 0.6);
+    font-size: 120px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 25px;
+    box-sizing: border-box;
+    .searchWeather {
+      display: flex;
+    }
+  }
+}

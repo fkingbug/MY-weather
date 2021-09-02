@@ -2,13 +2,13 @@ import MyInput from '../UI/input/MyInput'
 import SearchIcon from '@material-ui/icons/Search'
 import cl from './SearchBox.module.scss'
 
-const SearchBox = ({ searchValue, setSearchValue, axiosGetWeather, castomStyle }) => {
+const SearchBox = ({ searchValue, setSearchValue, axiosGetWeather, stylle }) => {
   return (
-    <div className={cl.searchBox}>
+    <div className={`${cl.searchBox} ${stylle ? cl.searchPage : cl.mainPage}`}>
       <MyInput
+        type="text"
         value={searchValue}
         onChange={e => setSearchValue(e.target.value)}
-        type="text"
         placeholder="Введите город"
         onKeyPress={event => (event.key === 'Enter' ? axiosGetWeather() : null)}
       />

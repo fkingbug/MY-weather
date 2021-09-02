@@ -36,4 +36,16 @@ export const city = {
   chengdu: 'https://ergo-reiseblog.de/wp-content/uploads/Chengdu.jpg',
   canton: 'http://pic2.cits.net/images/2019/4/15/174659226bc37a715-7.jpg',
   tianjin: 'https://pbs.twimg.com/media/E1yvQL2VkAMgufa.jpg',
+
+  //РУУУУУУУ
+  moscow:
+    'https://besthqwallpapers.com/Uploads/26-9-2018/66804/thumb2-moscow-city-sunset-modern-buildings-cityscapes-russia.jpg',
+  nizhnynovgorod: 'https://img.gazeta.ru/files3/802/13525802/upload-1-pic905-895x505-3660.jpg',
+  kaliningrad: 'https://flysmartavia.com/media/images/city/Kaliningrad.jpg',
+  krasnoyarsk: 'https://dela.ru/medianew/img/kras-1430600.gif',
+  novosibirsk: 'https://img.geliophoto.com/nsk2019w/000_nsk2019w.jpg',
+  saintpetersburg:
+    'https://img-cdn.tinkoffjournal.ru/i/Vcv99ssgHGUdLnMbjWPGPG3P9RgUzZyWvo61-q99HWk/w:1200/aHR0cHM6Ly9pbWct/Y2RuLnRpbmtvZmZq/b3VybmFsLnJ1Ly0v/bWFpbl9fX3NfcGl0/X19zaHV0dGVyc3Rv/Y2tfNjg4OTM5NjE4/LjVjYXpmbGtwb3No/by5qcGc',
+  //канада
+  toronto: 'https://ezsoldhomes.ca/wp-content/uploads/2020/03/Toronto-Skyline-MW1200.jpg',
 }
