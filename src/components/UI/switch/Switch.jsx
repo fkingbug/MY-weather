@@ -6,7 +6,6 @@ const Switch = () => {
   return (
     <label className={cl.switch}>
       <input type="checkbox" />
-
       <span className={cl.slider} />
     </label>
   )
