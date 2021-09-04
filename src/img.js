@@ -4,8 +4,6 @@ export const country = {
   сh: 'https://anngosslin.com/wp-content/uploads/2021/02/Screen-Shot-2021-02-18-at-13.17.17.png', //швейцария
   cn: 'https://kazak-center.ru/_pu/51/64265860.jpg', //Китай ?
   default: 'https://images.wallpaperscraft.ru/image/palmy_rassvet_ptitsy_125099_1920x1080.jpg',
-  // default:
-  //   'https://s2.best-wallpaper.net/wallpaper/1920x1200/1901/New-York-city-night-street-buildings-rain-USA_1920x1200.jpg',
 }
 
 export const city = {
@@ -48,4 +46,13 @@ export const city = {
     'https://img-cdn.tinkoffjournal.ru/i/Vcv99ssgHGUdLnMbjWPGPG3P9RgUzZyWvo61-q99HWk/w:1200/aHR0cHM6Ly9pbWct/Y2RuLnRpbmtvZmZq/b3VybmFsLnJ1Ly0v/bWFpbl9fX3NfcGl0/X19zaHV0dGVyc3Rv/Y2tfNjg4OTM5NjE4/LjVjYXpmbGtwb3No/by5qcGc',
   //канада
   toronto: 'https://ezsoldhomes.ca/wp-content/uploads/2020/03/Toronto-Skyline-MW1200.jpg',
+}
+
+export const imgSsearch = (name, cod) => {
+  name = name.toLowerCase().replace(/\s/g, '')
+  cod = cod.toLowerCase().replace(/\s/g, '')
+  let img = city[name] ? city[name] : country[cod] ? country[cod] : country.default
+  return {
+    background: `linear-gradient( rgba(38, 39 ,48, 0.6), rgba(38, 39 ,48, 0.6) ),url(${img}) 0% 0% / cover no-repeat`,
+  }
 }

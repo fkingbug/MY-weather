@@ -1,8 +1,8 @@
-import React, { useMemo, useState } from 'react'
-import axios from 'axios'
+import React, { useState } from 'react'
 
 import Main from './pages/Main'
 import Search from './pages/Search'
+import CityWeather from './API/CityWeather'
 
 function App() {
   const [searchValue, setSearchValue] = useState('')
@@ -11,12 +11,10 @@ function App() {
 
   const axiosGetWeather = async () => {
     try {
-      const response = await axios.get(
-        `http://api.openweathermap.org/data/2.5/forecast?q=${searchValue}&appid=5c02c94d726db1563810b36a96db3c02`,
-      )
-      setMainWeather(response.data)
-      if (!citys.some(e => e.city.id === response.data.city.id)) {
-        setCitys(prev => [...prev, response.data])
+      const citySearch = await CityWeather.getAll(searchValue)
+      setMainWeather(citySearch)
+      if (!citys.some(e => e.id === citySearch.id)) {
+        setCitys(prev => [...prev, citySearch])
       }
       setSearchValue('')
     } catch (e) {
