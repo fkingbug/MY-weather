@@ -2,11 +2,12 @@ import React, { useState, useMemo } from 'react'
 
 import SearchBox from '../SearchBox'
 import Switch from '../UI/switch/Switch'
+
 import { imgSsearch } from '../../img'
 import cl from './LeftSide.module.scss'
 
 const LeftSide = ({ actuale, citys, searchValue, setSearchValue, axiosGetWeather }) => {
-  const [switchTemp, setSwitchTemp] = useState(false)
+  const [isToggled, setIsToggled] = useState(false)
 
   const style = useMemo(() => imgSsearch(actuale.name, actuale.country), [actuale])
   return (
@@ -23,7 +24,7 @@ const LeftSide = ({ actuale, citys, searchValue, setSearchValue, axiosGetWeather
             setSearchValue={setSearchValue}
             axiosGetWeather={axiosGetWeather}
           />
-          <Switch />
+          <Switch isToggled={isToggled} setIsToggled={() => setIsToggled(!isToggled)} />
         </div>
       </div>
       <h1>{actuale.name}</h1>

@@ -13,8 +13,8 @@ export default class CityWeather {
 const getActualy = citySearchFilter => {
   const { name, country, id } = citySearchFilter.city
   let nameAndCountry = { name, country, id }
-  let s = citySearchFilter.list
+  let days = citySearchFilter.list
     .map(e => ({ ...e, dt_txt: e.dt_txt.split(' ')[0] }))
     .filter((weather, index, arr) => index === arr.findIndex(t => t.dt_txt === weather.dt_txt))
-  return { ...nameAndCountry, days: s }
+  return { ...nameAndCountry, days: days }
 }

@@ -2,11 +2,11 @@ import React from 'react'
 
 import cl from './switch.module.scss'
 
-const Switch = () => {
+const Switch = ({ isToggled, setIsToggled }) => {
   return (
     <label className={cl.switch}>
-      <input type="checkbox" />
-      <span className={cl.slider} />
+      <input type="checkbox" checked={isToggled} onChange={setIsToggled} />
+      <span className={`${cl.slider} `} />
     </label>
   )
 }

@@ -1,5 +1,11 @@
 .rigthSide {
-  width: 20%;
-  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 220px;
+  padding: 30px;
   background-color: #262730;
+  .mainInfo {
+    width: 100%;
+  }
 }
