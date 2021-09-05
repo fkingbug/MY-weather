@@ -6,9 +6,15 @@ import Switch from '../UI/switch/Switch'
 import { imgSsearch } from '../../img'
 import cl from './LeftSide.module.scss'
 
-const LeftSide = ({ actuale, citys, searchValue, setSearchValue, axiosGetWeather }) => {
-  const [isToggled, setIsToggled] = useState(false)
-
+const LeftSide = ({
+  actuale,
+  citys,
+  searchValue,
+  setSearchValue,
+  axiosGetWeather,
+  isToggled,
+  setIsToggled,
+}) => {
   const style = useMemo(() => imgSsearch(actuale.name, actuale.country), [actuale])
   return (
     <div style={style} className={cl.leftSide}>

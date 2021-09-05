@@ -16,5 +16,25 @@ const getActualy = citySearchFilter => {
   let days = citySearchFilter.list
     .map(e => ({ ...e, dt_txt: e.dt_txt.split(' ')[0] }))
     .filter((weather, index, arr) => index === arr.findIndex(t => t.dt_txt === weather.dt_txt))
+  days = getNewDays(days)
+  console.log(days)
   return { ...nameAndCountry, days: days }
+}
+
+const getNewDays = dayArr => {
+  return dayArr.map(
+    e =>
+      (e = {
+        tempCelsius: { celsius: Math.floor(e.main.temp - 273.15), name: 'C' },
+        tempFahrenheit: {
+          fahrenheit: Math.floor((e.main.temp - 273.15) * (9 / 5) + 32),
+          name: 'F',
+        },
+        pressure: e.main.pressure,
+        humidity: e.main.humidity,
+        weather: e.weather[0].main,
+        wind: e.wind.speed,
+        date: e.dt_txt,
+      }),
+  )
 }

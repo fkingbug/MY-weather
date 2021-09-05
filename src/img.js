@@ -56,3 +56,18 @@ export const imgSsearch = (name, cod) => {
     background: `linear-gradient( rgba(38, 39 ,48, 0.6), rgba(38, 39 ,48, 0.6) ),url(${img}) 0% 0% / cover no-repeat`,
   }
 }
+
+const weathersImg = {
+  thunderstorm: 'https://cdn-icons-png.flaticon.com/512/615/615507.png',
+  drizzle: 'https://cdn-icons-png.flaticon.com/512/615/615494.png',
+  rain: 'https://cdn-icons-png.flaticon.com/512/615/615467.png',
+  snow: 'https://cdn-icons-png.flaticon.com/512/615/615497.png',
+  atmosphere: 'https://cdn-icons-png.flaticon.com/512/615/615501.png',
+  clouds: 'https://cdn-icons-png.flaticon.com/512/615/615468.png',
+  clear: 'https://cdn-icons-png.flaticon.com/512/615/615503.png',
+}
+
+export const weatherImg = name => {
+  console.log(name)
+  return { background: `url(${weathersImg[name.toLowerCase()]})0% 0% / cover` }
+}

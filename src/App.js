@@ -34,6 +34,7 @@ function App() {
         <Main
           citys={citys}
           mainWeather={mainWeather}
+          setMainWeather={setMainWeather}
           searchValue={searchValue}
           setSearchValue={setSearchValue}
           axiosGetWeather={axiosGetWeather}

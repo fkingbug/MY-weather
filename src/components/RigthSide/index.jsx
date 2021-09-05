@@ -3,13 +3,12 @@ import RigthSideInfo from '../RigthSideInfo'
 
 import cl from './RigthSide.module.scss'
 
-const RigthSide = ({ actuale }) => {
-  const [citysIcon, setCitysIcon] = useState(false)
-
+const RigthSide = ({ actuale, isToggled }) => {
   return (
     <div className={cl.rigthSide}>
-      <div className={cl.mainInfo}>{!citysIcon ? <RigthSideInfo actuale={actuale} /> : null}</div>
-      <button>switch</button>
+      <div className={cl.mainInfo}>
+        <RigthSideInfo actuale={actuale} isToggled={isToggled} />
+      </div>
     </div>
   )
 }

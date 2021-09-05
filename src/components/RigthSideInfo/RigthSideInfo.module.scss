@@ -1,13 +1,13 @@
 .toDay {
   color: white;
-  font-family: sans-serif;
+
   font-size: 25px;
   text-transform: uppercase;
   text-align: center;
 }
 .centerS {
   color: wheat;
-  font-family: sans-serif;
+
   font-size: 11px;
   text-align: center;
 }
@@ -16,27 +16,42 @@
   flex-direction: row;
   justify-content: space-between;
   color: white;
-  font-family: sans-serif;
+
   line-height: 1.8;
   font-size: 19px;
 }
 
 .mainDay {
   color: white;
-  font-family: sans-serif;
+
   font-size: 90px;
   text-align: center;
-  margin: 25px 0;
+  margin: 15px 0;
 
   .pos {
     position: relative;
     display: inline-block;
+    font-weight: 300;
   }
   .cOrF {
     position: absolute;
     right: -16px;
     top: 0px;
-    font-size: 34px;
+    font-size: 27px;
     color: gray;
   }
+}
+.nextDay {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  margin-top: 35px;
+}
+.weatherMainDay {
+  position: absolute;
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  top: 40px;
+  left: -37px;
 }
